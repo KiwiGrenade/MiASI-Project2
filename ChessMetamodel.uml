@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_r3VVwEUuEfCXd9ctvCTcZw" name="instance_diagram_1" visibility="public">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_r6fXcEUuEfCXd9ctvCTcZw">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_PYDcQEUvEfCXd9ctvCTcZw" name="Board" visibility="package">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_qNtTkEZBEfC34IrWwVNdgg" name="size">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_2aXoQEZCEfC34IrWwVNdgg" name="moveHistory" visibility="public" isOrdered="true">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vkBSwEh3EfCvF8TujsuLIw"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_u70ogEZBEfC34IrWwVNdgg" name="draw"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_LUghsEh5EfCvF8TujsuLIw" name="validate">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_X0iTwEh5EfCvF8TujsuLIw" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBoolean"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_9KU8AEU4EfC387Za0EBymg" name="Piece" visibility="package" isAbstract="true">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="__WHBoEU5EfC387Za0EBymg" name="color" type="_q8T28EU5EfC387Za0EBymg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_dQkQ8EU_EfC387Za0EBymg" name="type" type="_k6FcgEU-EfC387Za0EBymg"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_37w0cEZAEfC34IrWwVNdgg" name="move" visibility="public" isAbstract="true">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_MFtDMEh7EfCvF8TujsuLIw" name="To" type="_j89eIEh5EfCvF8TujsuLIw"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Enumeration" xmi:id="_q8T28EU5EfC387Za0EBymg" name="PieceColor" visibility="public">
+    <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_x_1kEEU5EfC387Za0EBymg" name="White"/>
+    <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_zVvnEEU5EfC387Za0EBymg" name="Black"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Enumeration" xmi:id="_k6FcgEU-EfC387Za0EBymg" name="PieceType" visibility="public">
+    <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_vfk0gEU-EfC387Za0EBymg" name="King"/>
+    <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_xNkAUEU-EfC387Za0EBymg" name="Queen"/>
+    <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_rdxL8EU-EfC387Za0EBymg" name="Rook"/>
+    <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_uWg6sEU-EfC387Za0EBymg" name="Bishop"/>
+    <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_tZxloEU-EfC387Za0EBymg" name="Knight"/>
+    <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_p4rdcEU-EfC387Za0EBymg" name="Pawn"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Tnn-4EY-EfC34IrWwVNdgg" name="King">
+    <generalization xmi:type="uml:Generalization" xmi:id="__CWHgEY-EfC34IrWwVNdgg" general="_9KU8AEU4EfC387Za0EBymg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_XbMXIEY-EfC34IrWwVNdgg" name="Queen">
+    <generalization xmi:type="uml:Generalization" xmi:id="_CH2f4EY_EfC34IrWwVNdgg" general="_9KU8AEU4EfC387Za0EBymg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_YSfLgEY-EfC34IrWwVNdgg" name="Rook">
+    <generalization xmi:type="uml:Generalization" xmi:id="_ENUXkEY_EfC34IrWwVNdgg" general="_9KU8AEU4EfC387Za0EBymg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Y5XlUEY-EfC34IrWwVNdgg" name="Bishop">
+    <generalization xmi:type="uml:Generalization" xmi:id="_F9J9gEY_EfC34IrWwVNdgg" general="_9KU8AEU4EfC387Za0EBymg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_ZwVCgEY-EfC34IrWwVNdgg" name="Knight">
+    <generalization xmi:type="uml:Generalization" xmi:id="_HWE4QEY_EfC34IrWwVNdgg" general="_9KU8AEU4EfC387Za0EBymg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_aTk5gEY-EfC34IrWwVNdgg" name="Pawn">
+    <generalization xmi:type="uml:Generalization" xmi:id="_I1QzEEY_EfC34IrWwVNdgg" general="_9KU8AEU4EfC387Za0EBymg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_iQOxkEY_EfC34IrWwVNdgg" memberEnd="_iQRN0UY_EfC34IrWwVNdgg _iQTDAUY_EfC34IrWwVNdgg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_iQQmwEY_EfC34IrWwVNdgg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_iQRN0EY_EfC34IrWwVNdgg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_iQTDAUY_EfC34IrWwVNdgg" name="board" type="_PYDcQEUvEfCXd9ctvCTcZw" association="_iQOxkEY_EfC34IrWwVNdgg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jk6FgEY_EfC34IrWwVNdgg" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_iQRN0UY_EfC34IrWwVNdgg" name="pieces" type="_9KU8AEU4EfC387Za0EBymg" aggregation="composite" association="_iQOxkEY_EfC34IrWwVNdgg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_j89eIEh5EfCvF8TujsuLIw" name="Position" visibility="public">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_N_pkMEh3EfCvF8TujsuLIw" name="row">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_SjuMUEh3EfCvF8TujsuLIw" name="col">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_yMrsMEh5EfCvF8TujsuLIw" memberEnd="_yMv9oEh5EfCvF8TujsuLIw _yM5uoEh5EfCvF8TujsuLIw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_yMuvgEh5EfCvF8TujsuLIw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_yMvWkEh5EfCvF8TujsuLIw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_yM5uoEh5EfCvF8TujsuLIw" name="position" type="_j89eIEh5EfCvF8TujsuLIw" aggregation="composite" association="_yMrsMEh5EfCvF8TujsuLIw"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_yMv9oEh5EfCvF8TujsuLIw" name="piece" type="_9KU8AEU4EfC387Za0EBymg" association="_yMrsMEh5EfCvF8TujsuLIw"/>
+  </packagedElement>
+</uml:Model>
